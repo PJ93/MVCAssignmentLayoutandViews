@@ -110,6 +110,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\CV.cs" />
     <Compile Include="Models\Projectlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

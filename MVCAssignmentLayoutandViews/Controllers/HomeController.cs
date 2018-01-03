@@ -18,6 +18,13 @@ namespace MVCAssignmentLayoutandViews.Controllers
         // GET: About
         public ActionResult About()
         {
+            Job.Jobs = new List<Job>();
+            Job.Jobs.Add(new Job("NIBE AB", "Markaryd" ,"Summer 2015 - Spring 2017"));
+            Job.Jobs.Add(new Job("Telecare", "Ljungby" , "Winter 2013 - Summer 2014"));
+            ///////////////////////>
+            Education.Edu = new List<Education>();
+            Education.Edu.Add(new Education("Sunnebo Skolan","2009 - 2012"));
+
             return View();
         }
 

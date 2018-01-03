@@ -1,8 +1,36 @@
-﻿
+﻿@model MVCAssignmentLayoutandViews.Models.Job
 @{
     ViewBag.Title = "About";
 }
 
 <h2>About Me</h2>
 <img src="~/Content/Image/face logo.png" />
+<h2>Previous Jobs</h2>
+<table class="table-bordered table-striped">
+    <tr>
+        <td>Name</td>
+        <td>Years</td>
+    </tr>
+    @foreach (var item in MVCAssignmentLayoutandViews.Models.Job.Jobs)
+    {
+        <tr>
+            <td>@item.JName</td>
+            <td>@item.JYears</td>
+        </tr>
+    }
+</table>
+<h2>Education</h2>
+<table class="table-bordered table-striped">
+    <tr>
+        <td>Name</td>
+        <td>Years</td>
+    </tr>
+    @foreach (var item in MVCAssignmentLayoutandViews.Models.Education.Edu)
+    {
+        <tr>
+            <td>@item.EName</td>
+            <td>@item.EYears</td>
+        </tr>
+    }
+</table>
 
