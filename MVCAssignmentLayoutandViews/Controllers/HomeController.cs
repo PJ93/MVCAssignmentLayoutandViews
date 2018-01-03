@@ -23,7 +23,11 @@ namespace MVCAssignmentLayoutandViews.Controllers
             Job.Jobs.Add(new Job("Telecare", "Ljungby" , "Winter 2013 - Summer 2014"));
             ///////////////////////>
             Education.Edu = new List<Education>();
-            Education.Edu.Add(new Education("Sunnebo Skolan","2009 - 2012"));
+            Education.Edu.Add(new Education("Lexicon", "Växjö", "C#, .Net", "2017 - present"));
+            Education.Edu.Add(new Education("Jönköping University", "Jönköping", "Inbyggda system", "2013 [Did not finish education]"));
+            Education.Edu.Add(new Education("Sunnebo Skolan", "Ljungby", "Komvux", "2012 winter"));
+            Education.Edu.Add(new Education("Sunnebo Skolan","Ljungby","Teknik Programmet","2009 - 2012"));
+            Education.Edu.Add(new Education("Åbyskolan", "Lagan", "Grundskola", "2000 - 2009"));
 
             return View();
         }

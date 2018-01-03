@@ -27,11 +27,14 @@ namespace MVCAssignmentLayoutandViews.Models
         public static List<Education> Edu { get; set; }
         public string EName { get; set; }
         public string ELocation { get; set; }
+        public string Focus { get; set; }
         public string EYears { get; set; }
 
-        public Education(string ename, string eyears)
+        public Education(string ename, string elocation, string focus, string eyears)
         {
             EName = ename;
+            ELocation = elocation;
+            Focus = focus;
             EYears = eyears;
         }
 

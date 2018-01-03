@@ -5,16 +5,24 @@
 
 <h2>About Me</h2>
 <img src="~/Content/Image/face logo.png" />
+
+<p>Hello there!</p>
+<p>I'm Patrik, novice programmer and webdesigner.</p>
+<p>I currently study C# & .NET at Lexicon in Växjö and hoping to work as a programmer in the near future.</p>
+<p>I've previously mostly worked in industry mostly with assembling products like phones and water heaters, I've been a good worker but had to leave due to personal reasons, which nowadays isn't a factor.</p>
+<p>If you're curious about my programming skills and how far I've come during my time at Lexicon do check out the "Project" on the navbar at the top which has links to my Github and all the Lexicon assignments and Projects I've done.</p>
 <h2>Previous Jobs</h2>
 <table class="table-bordered table-striped">
     <tr>
         <td>Name</td>
+        <td>Location</td>
         <td>Years</td>
     </tr>
     @foreach (var item in MVCAssignmentLayoutandViews.Models.Job.Jobs)
     {
         <tr>
             <td>@item.JName</td>
+            <td>@item.JLocation</td>
             <td>@item.JYears</td>
         </tr>
     }
@@ -23,12 +31,16 @@
 <table class="table-bordered table-striped">
     <tr>
         <td>Name</td>
+        <td>Focus</td>
+        <td>Location</td>
         <td>Years</td>
     </tr>
     @foreach (var item in MVCAssignmentLayoutandViews.Models.Education.Edu)
     {
         <tr>
             <td>@item.EName</td>
+            <td>@item.Focus</td>
+            <td>@item.ELocation</td>
             <td>@item.EYears</td>
         </tr>
     }
