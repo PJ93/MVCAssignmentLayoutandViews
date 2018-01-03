@@ -1,0 +1,22 @@
+﻿@model MVCAssignmentLayoutandViews.Models.Contact
+
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<h2>Contact</h2>
+<table class="table-bordered table-striped">
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Tele</td>
+    </tr>
+    @foreach (var item in MVCAssignmentLayoutandViews.Models.Contact.Contacts)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Tele</td>
+        </tr>
+    }
+</table>

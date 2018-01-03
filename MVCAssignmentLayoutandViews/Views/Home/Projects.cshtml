@@ -1,0 +1,20 @@
+﻿@model MVCAssignmentLayoutandViews.Models.Projectlist
+@{
+    ViewBag.Title = "Projects";
+}
+
+<h2>Projects</h2>
+
+<p>My projects can be found at my <a href="https://github.com/PJ93">Github</a></p>
+<table class="table-bordered table-striped">
+    <tr>
+        <td>Projects</td>
+    </tr>
+    @foreach (var item in MVCAssignmentLayoutandViews.Models.Projectlist.Projectlistings)
+    {
+        <tr>
+            <td><a href="@item.GitLink">@item.PName</a></td>
+            
+        </tr>
+    }
+</table>
