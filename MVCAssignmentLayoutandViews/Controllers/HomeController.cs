@@ -13,6 +13,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
         public ActionResult Index()
         {
             return View();
+            
         }
 
         // GET: About
@@ -47,10 +48,25 @@ namespace MVCAssignmentLayoutandViews.Controllers
         public ActionResult Contacts()
         {
             Contact.Contacts = new List<Contact>();
-            Contact.Contacts.Add(new Contact("Patrik","PJ93coder@gmail.com","0702994326"));
+            Contact.Contacts.Add(new Contact("Patrik Jörgensen","PJ93coder@gmail.com","0702994326"));
 
             return View();
         }
+
+        //GET: FeverCheck
+        public ActionResult FeverCheck()
+        {
+            return View();
+        }
+
+        //POST: FeverCheck
+        [HttpPost]
+        public ActionResult FeverCheck(int msg)
+        {
+            ViewBag.msg = msg;
+            return View();
+        }
+
 
     }
 }

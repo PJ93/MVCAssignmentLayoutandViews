@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "FeverCheck";
+}
+
+<h2>Hello there</h2>
+
+<form action="@Url.Action("FeverCheck")" method="post" )>
+    <input type="number" name="msg" value="" placeholder="Enter your Tempature here" /><br />
+    <input type="radio" name=" scale" value="Celcius" checked />Celcius
+    <input type="radio" name=" scale" value="Fahrenheit" />Fahrenheit<br />
+    <input type="submit" value="Send" />
+</form>
+
+
+@if (ViewBag.msg != null)
+{
+    <h3>@ViewBag.msg</h3>
+}
+@if (ViewBag.msg > 37)
+{
+    <h3>Good heavens you got a fever</h3>
+}
+@if (ViewBag.msg < 37)
+{
+    <h3>Good heavens you gotta be cold</h3>
+}
