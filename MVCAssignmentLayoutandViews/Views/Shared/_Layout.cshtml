@@ -20,7 +20,9 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <img src="~/Content/Image/face logo.png" width="50" height="50"/>
+                        <a href='@Url.Action("Index", "Home")'>
+                            <img src="~/Content/Image/face logo.png" height="42" width="42"/>
+                        </a>
                         @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                     </div>
                     <div class="navbar-collapse collapse">
@@ -36,7 +38,7 @@
         </header>
         @RenderBody()
         <hr />
-        <footer>
+        <footer class=" footer">
             <p>&copy; @DateTime.Now.Year - Patrik Jörgensen</p>
         </footer>
     </div>

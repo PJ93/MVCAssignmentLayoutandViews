@@ -16,7 +16,23 @@ textarea {
     max-width: 280px;
 }
 
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
 
-.carousel-inner img {
-    margin: auto;
+
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+}
+
+
+#myCarousel {
+    position: absolute;
+    padding: 0px;
+    background-image: none;
 }
