@@ -1,14 +1,14 @@
-﻿
+﻿@model MVCAssignmentLayoutandViews.Models.Tempcheck
 @{
     ViewBag.Title = "FeverCheck";
 }
 
-<h2>Hello there</h2>
+<h2>Check if you got a fever or not</h2>
 
 <form action="@Url.Action("FeverCheck")" method="post" )>
     <input type="number" name="msg" value="" placeholder="Enter your Tempature here" /><br />
-    <input type="radio" name=" scale" value="Celcius" checked />Celcius
-    <input type="radio" name=" scale" value="Fahrenheit" />Fahrenheit<br />
+    <input type="radio" name="scale" value="Celcius" checked />Celcius
+    <input type="radio" name="scale" value="Fahrenheit" />Fahrenheit<br />
     <input type="submit" value="Send" />
 </form>
 
@@ -17,8 +17,14 @@
 {
     <h3>@ViewBag.msg</h3>
 }
-@if (ViewBag.msg > 37)
+@if (ViewBag.msg > 50)
 {
+    <h3>I'm pretty sure you're dead.</h3>
+}
+
+@if (ViewBag.msg > 37 && ViewBag.msg <= 50)
+{
+
     <h3>Good heavens you got a fever</h3>
 }
 @if (ViewBag.msg < 37)
