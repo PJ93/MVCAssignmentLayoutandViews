@@ -61,7 +61,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
 
         //POST: FeverCheck
         [HttpPost]
-        public ActionResult FeverCheck(int msg)
+        public ActionResult FeverCheck(int msg, string scale, bool Check)
         {
             ViewBag.msg = msg;
             return View();
