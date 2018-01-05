@@ -132,6 +132,7 @@
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\FeverCheck.cshtml" />
+    <Content Include="Views\Home\Guessingame.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
