@@ -67,6 +67,20 @@ namespace MVCAssignmentLayoutandViews.Controllers
             return View();
         }
 
+        //GET: Guessingame
+        public ActionResult Guessingame()
+        {
+            return View();
+        }
+
+        //POST: Guessingame
+        [HttpPost]
+        public ActionResult Guessingame(int msg, string result)
+        {
+            ViewBag.msg = msg;
+            ViewBag.result = result;
+            return View("result");
+        }
 
     }
 }
