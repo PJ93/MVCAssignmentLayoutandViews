@@ -6,11 +6,11 @@
 <h2>Guess a number between 1 and 100</h2>
 
 <form action="@Url.Action("Guessingame")" method="post" )>
-    <input type="number" name="msg" value="" placeholder="Enter between 1 - 100" />
+    <input type="number" name="guess" value="" placeholder="Enter between 1 - 100" />
     <input type="submit" value="Send" />
 </form>
-
-@if (ViewBag.msg != null)
+@ViewBag.result
+@if (ViewBag.result != null)
 {
-    <h3>test</h3>
+    <h3>ViewBag.result</h3>
 }

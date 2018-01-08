@@ -7,21 +7,22 @@ namespace MVCAssignmentLayoutandViews.Models
 {
     public class Guessing_game
     {
-        public int msg { get; set; }
+        public int guess { get; set; }
         public string result = "";
-        public Guessing_game(int msg)
+        public Guessing_game(int guess)
         {
 
             Random rnd = new Random();
+            int random = rnd.Next(1, 100);
             bool keepalive = true;
             while (keepalive)
             {
-                int random = rnd.Next(1, 100);
+                
 
-                if (msg == random)
+                if (this.guess == random)
                 {
                     result = "Welldone";
-                    keepalive = false;
+                    //keepalive = false;
                 }
                 else
                 {
