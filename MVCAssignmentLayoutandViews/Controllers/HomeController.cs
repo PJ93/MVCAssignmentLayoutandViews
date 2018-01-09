@@ -77,8 +77,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
         [HttpPost]
         public ActionResult Guessingame(int guess, string result)
         {
-            ViewBag.guess = guess;
-            ViewBag.result = result;
+            
             return View();
         }
 

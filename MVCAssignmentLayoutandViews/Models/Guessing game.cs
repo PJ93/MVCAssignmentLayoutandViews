@@ -21,6 +21,7 @@ namespace MVCAssignmentLayoutandViews.Models
 
                 if (this.guess == random)
                 {
+                    this.guess = guess;
                     result = "Welldone";
                     //keepalive = false;
                 }
