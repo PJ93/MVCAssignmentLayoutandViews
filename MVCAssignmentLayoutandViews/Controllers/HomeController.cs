@@ -68,8 +68,11 @@ namespace MVCAssignmentLayoutandViews.Controllers
         }
 
         //GET: Guessingame
+        [HttpGet]
         public ActionResult Guessingame()
         {
+            Random rnd = new Random();
+            int random = rnd.Next(1, 100);
             return View();
         }
 
@@ -77,8 +80,9 @@ namespace MVCAssignmentLayoutandViews.Controllers
         [HttpPost]
         public ActionResult Guessingame(int guess, string result)
         {
+
             
-            return View();
+            return View(result);
         }
 
     }
