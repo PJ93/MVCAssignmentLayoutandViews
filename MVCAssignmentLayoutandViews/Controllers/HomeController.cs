@@ -9,6 +9,8 @@ namespace MVCAssignmentLayoutandViews.Controllers
 {
     public class HomeController : Controller
     {
+        int thenumber;
+
         // GET: Home
         public ActionResult Index()
         {
@@ -72,17 +74,28 @@ namespace MVCAssignmentLayoutandViews.Controllers
         public ActionResult Guessingame()
         {
             Random rnd = new Random();
-            int random = rnd.Next(1, 100);
+            thenumber = 4;
+
             return View();
         }
 
         //POST: Guessingame
         [HttpPost]
-        public ActionResult Guessingame(int guess, string result)
+        public ActionResult Guessingame(int guess)
         {
-
+            string result;
+            if (guess == thenumber)
+            {
+                result = "yes";
+                ViewBag.result = result;
+            }
+            else
+            {
+                result = "no";
+                ViewBag.result = result;
+            }
             
-            return View(result);
+            return View();
         }
 
     }

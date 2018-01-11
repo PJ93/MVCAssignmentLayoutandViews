@@ -9,6 +9,7 @@ namespace MVCAssignmentLayoutandViews.Models
     {
         public int guess { get; set; }
         public string result = "";
+        public int random { get; set; }
         public Guessing_game(int guess)
         {
 
