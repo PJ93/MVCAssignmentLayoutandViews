@@ -74,7 +74,8 @@ namespace MVCAssignmentLayoutandViews.Controllers
         public ActionResult Guessingame()
         {
             Random rnd = new Random();
-            ViewBag.LinkableId = 4;
+            int random = rnd.Next(1, 100);
+            Session["Random"] = random;
 
             return View();
         }
@@ -83,19 +84,29 @@ namespace MVCAssignmentLayoutandViews.Controllers
         [HttpPost]
         public ActionResult Guessingame(int guess)
         {
+            HttpCookie Highscore = Request.Cookies["highscore"];
+
             ViewBag.result = "";
             string result;
-            if (guess == ViewBag.LinkableId)
+            if (guess == (int)Session["Random"])
             {
-                result = "yes";
-                ViewBag.result = result;
+                result = "Correct!";
+            }
+            else if (guess < (int)Session["Random"]) 
+            {
+                result = "Too low";
+            }
+            else if (guess > (int)Session["Random"])
+            {
+                result = "Too high";
             }
             else
             {
                 result = "no";
-                ViewBag.result = result;
+                
             }
-            
+            ViewBag.result = result;
+
             return View();
         }
 
