@@ -91,6 +91,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Image\Cold-weather-thermometer-clip-art-free-clipart.gif" />
     <Content Include="Content\Image\face logo.png" />
     <Content Include="Content\Image\placeholder slider 2.png" />
     <Content Include="Content\Image\placeholder slider.png" />

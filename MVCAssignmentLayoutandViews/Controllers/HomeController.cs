@@ -68,26 +68,54 @@ namespace MVCAssignmentLayoutandViews.Controllers
             int calc = Convert.ToInt32(msg);
             string awnser = " ";
 
-            if(calc > 50)
+            if(scale == "Celcius")
             {
-                awnser = "I'm pretty sure you're dead.";
+                if (calc > 50)
+                {
+                    awnser = "I'm pretty sure you're dead.";
+                }
+                else if (calc == 37 || calc == 36)
+                {
+                    awnser = "you're perfectly fine";
+                }
+                else if (calc == 38)
+                {
+                    awnser = "you got a fever there";
+                }
+                else if (calc > 40)
+                {
+                    awnser = "Now thats one hell of a fever";
+                }
+                else if (calc < 36)
+                {
+                    awnser = "You got hypothermia, go seek a doctor";
+                }
             }
-            else if (calc == 37 || calc == 36)
+            else
             {
-                awnser = "you're perfectly fine";
+                if (calc > 150)
+                {
+                    awnser = "I'm pretty sure you're dead.";
+                }
+                else if (calc > 95 || calc < 100)
+                {
+                    awnser = "you're perfectly fine";
+                }
+                else if (calc > 99)
+                {
+                    awnser = "you got a fever there";
+                }
+                else if (calc > 150)
+                {
+                    awnser = "Now thats one hell of a fever";
+                }
+                else if (calc < 96)
+                {
+                    awnser = "You got hypothermia, go seek a doctor";
+                }
             }
-            else if (calc == 38)
-            {
-                awnser = "you got a fever there";
-            }
-            else if (calc > 40)
-            {
-                awnser = "Now thats one hell of a fever";
-            }
-            else if (calc < 36)
-            {
-                awnser = "You got hypothermia, go seek a doctor";
-            }
+
+
 
 
 
