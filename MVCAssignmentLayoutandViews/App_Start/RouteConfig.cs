@@ -19,6 +19,14 @@ namespace MVCAssignmentLayoutandViews
                defaults: new { controller = "Home", action = "FeverCheck", id = UrlParameter.Optional }
            );
 
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+               name: "Guessingame",
+               url: "Guessingame",
+               defaults: new { controller = "Home", action = "Guessingame", id = UrlParameter.Optional }
+           );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

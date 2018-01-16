@@ -63,9 +63,37 @@ namespace MVCAssignmentLayoutandViews.Controllers
 
         //POST: FeverCheck
         [HttpPost]
-        public ActionResult FeverCheck(int msg, string scale, bool Check)
+        public ActionResult FeverCheck(string msg, string scale)
         {
-            ViewBag.msg = msg;
+            int calc = Convert.ToInt32(msg);
+            string awnser = " ";
+
+            if(calc > 50)
+            {
+                awnser = "I'm pretty sure you're dead.";
+            }
+            else if (calc == 37 || calc == 36)
+            {
+                awnser = "you're perfectly fine";
+            }
+            else if (calc == 38)
+            {
+                awnser = "you got a fever there";
+            }
+            else if (calc > 40)
+            {
+                awnser = "Now thats one hell of a fever";
+            }
+            else if (calc < 36)
+            {
+                awnser = "You got hypothermia, go seek a doctor";
+            }
+
+
+
+
+
+            ViewBag.awnser = awnser;
             return View();
         }
 
@@ -84,21 +112,43 @@ namespace MVCAssignmentLayoutandViews.Controllers
         [HttpPost]
         public ActionResult Guessingame(int guess)
         {
-            HttpCookie Highscore = Request.Cookies["highscore"];
-
+            int tries = 1 + 1;
             ViewBag.result = "";
             string result;
+            string amountoftries;
+            HttpCookie Highscore = Request.Cookies["highscore"];
+
+            if (Highscore == null)
+            {
+                Highscore = new HttpCookie("high");
+
+            }
+            else
+            {
+                tries++;
+                amountoftries = tries.ToString();
+                Highscore["highscore"] = amountoftries;
+
+            }
+
+
             if (guess == (int)Session["Random"])
             {
                 result = "Correct!";
+                //tries++;
+                amountoftries = tries.ToString();
+                Highscore["highscore"] = amountoftries;
+
             }
             else if (guess < (int)Session["Random"]) 
             {
                 result = "Too low";
+                //tries++;
             }
             else if (guess > (int)Session["Random"])
             {
                 result = "Too high";
+                //tries++;
             }
             else
             {
@@ -106,6 +156,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
                 
             }
             ViewBag.result = result;
+            ViewBag.F = Highscore["highscore"];
 
             return View();
         }
