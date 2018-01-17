@@ -18,7 +18,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
 
         // POST: User
         [HttpPost]
-        public ActionResult People(string Addpeople)
+        public ActionResult PeopleAdd(string Addpeople)
         {
             //PeopleM.Peoples = new List<PeopleM>();
             
@@ -27,15 +27,18 @@ namespace MVCAssignmentLayoutandViews.Controllers
                 PeopleM.Peoples.Add(new PeopleM(Addpeople));
             }
 
-            return View();
+            return View("People");
         }
 
-        // POST: User
-        //[HttpPost]
-        //public ActionResult People(string Search)
-        //{
+        //POST: User
+        [HttpPost]
+        public ActionResult PeopleSearch(string Search)
+        {
 
-        //}
+
+
+            return View("People");
+        }
 
 
     }

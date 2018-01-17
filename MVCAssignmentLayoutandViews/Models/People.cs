@@ -16,6 +16,11 @@ namespace MVCAssignmentLayoutandViews.Models
             Peoples = new List<PeopleM>();
         }
 
+        private ID()
+        {
+
+        }
+
         public PeopleM (string name)
         {
             Name = name;
