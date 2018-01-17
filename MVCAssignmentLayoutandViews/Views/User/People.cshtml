@@ -1,0 +1,24 @@
+﻿@model MVCAssignmentLayoutandViews.Models.PeopleM
+
+@{
+    ViewBag.Title = "People";
+}
+
+<h2>People</h2>
+
+<form action="@Url.Action("People")" method="post" )>
+    <input type="text" name="Search" value="" placeholder="" />
+    <input type="submit" value="Send" />
+</form>
+
+<form action="@Url.Action("People")" method="post" )>
+    <input type="text" name="Addpeople" value="" placeholder="" />
+    <input type="submit" value="Send" />
+</form>
+
+<table class="table-bordered table-striped">
+    @foreach (var item in MVCAssignmentLayoutandViews.Models.PeopleM.Peoples)
+    {
+        <tr><td> @item.Name </td></tr>
+    }
+</table>
