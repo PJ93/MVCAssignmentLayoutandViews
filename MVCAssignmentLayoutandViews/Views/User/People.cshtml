@@ -4,21 +4,24 @@
     ViewBag.Title = "People";
 }
 
-<h2>People</h2>
+<h1>People</h1>
 
+<h3>Search</h3>
 <form action="@Url.Action("People")" method="post" )>
-    <input type="text" name="Search" value="" placeholder="" />
+    <input type="text" name="Search" value="" placeholder="Search for people" />
     <input type="submit" value="Send" />
 </form>
 
+
+<h3>Add a Person</h3>
 <form action="@Url.Action("People")" method="post" )>
-    <input type="text" name="Addpeople" value="" placeholder="" />
+    <input type="text" name="Addpeople" value="" placeholder="Add a person" />
     <input type="submit" value="Send" />
 </form>
 
 <table class="table-bordered table-striped">
     @foreach (var item in MVCAssignmentLayoutandViews.Models.PeopleM.Peoples)
     {
-        <tr><td> @item.Name </td></tr>
+        <tr><td> @item.Name </td><td><a href="www.youtube.com">Delete</a></td></tr>
     }
 </table>

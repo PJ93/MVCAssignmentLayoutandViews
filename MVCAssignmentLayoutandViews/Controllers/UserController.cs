@@ -18,10 +18,10 @@ namespace MVCAssignmentLayoutandViews.Controllers
 
         // POST: User
         [HttpPost]
-        public ActionResult People(string Search, string Addpeople)
+        public ActionResult People(string Addpeople)
         {
             //PeopleM.Peoples = new List<PeopleM>();
-            PeopleM.Peoples.Add(new PeopleM("John doe"));
+            
             if (Addpeople != null)
             {
                 PeopleM.Peoples.Add(new PeopleM(Addpeople));
@@ -29,6 +29,13 @@ namespace MVCAssignmentLayoutandViews.Controllers
 
             return View();
         }
+
+        // POST: User
+        //[HttpPost]
+        //public ActionResult People(string Search)
+        //{
+
+        //}
 
 
     }

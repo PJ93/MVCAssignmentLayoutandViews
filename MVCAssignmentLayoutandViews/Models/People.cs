@@ -18,7 +18,7 @@ namespace MVCAssignmentLayoutandViews.Models
 
         public PeopleM (string name)
         {
-            name = Name;
+            Name = name;
         } 
     }
 }
