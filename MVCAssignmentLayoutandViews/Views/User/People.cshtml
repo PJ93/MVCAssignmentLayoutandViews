@@ -6,20 +6,34 @@
 
 <h1>People</h1>
 
-<h3>Search</h3>
-<form action="@Url.Action("PeopleSearch")" method="post" )>
-    <input type="text" name="Search" value="" placeholder="Search for people" />
-    <input type="submit" value="Send" />
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Search</h3>
+            <form action="@Url.Action("PeopleSearch")" method="post" )>
+                <input type="text" name="Search" value="" placeholder="Search for people" />
+                <input type="submit" value="Send" />
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <h3>Add a Person</h3>
+            <form action="@Url.Action("PeopleAdd")" method="post" )>
+                <input type="text" name="Addpeople" value="" placeholder="Add a person" />
+                <input type="submit" value="Add" />
+            </form>
+        </div>
 
 
-<h3>Add a Person</h3>
-<form action="@Url.Action("PeopleAdd")" method="post" )>
-    <input type="text" name="Addpeople" value="" placeholder="Add a person" />
-    <input type="submit" value="Add" />
-</form>
 
+    </div>
+</div>
+
+
+
+
+<div>
     @foreach (var item in MVCAssignmentLayoutandViews.Models.PeopleM.Peoples)
     {
         @Html.Partial("_People", item)
     }
+</div>

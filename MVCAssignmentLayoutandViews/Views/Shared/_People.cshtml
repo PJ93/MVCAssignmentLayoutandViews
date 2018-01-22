@@ -1,13 +1,25 @@
 ﻿@model MVCAssignmentLayoutandViews.Models.PeopleM
-<div id="@($"PeopleID" + Model.ID)">
-    <h2>@Model.Name</h2>
+<div id="@($"PeopleID" + Model.ID)" class="container">
+    <div class="row">
+
+        <div class="col-sm-6"><p>@Model.Name</p></div>
+
+        <div class="col-sm-6">
+            @Ajax.ActionLink("Delete", "AjaxDeletePeople", new { id = Model.ID },
+                    new AjaxOptions
+                    {
+                        InsertionMode = InsertionMode.ReplaceWith,
+                        UpdateTargetId = $"PeopleID" + Model.ID
+                    }, new { @class = "btn btn-danger" }
+                    )
 
 
-    @Ajax.ActionLink("Delete", "AjaxDeletePeople", new { id = Model.ID },
-                      new AjaxOptions
-                      {
-                          InsertionMode = InsertionMode.ReplaceWith ,
-                          UpdateTargetId = $"PeopleID" + Model.ID
-                      }, new { @class = "btn btn-danger" }
-                      )
+        </div>
+
+
+    </div>
+
+
+
+
 </div>
