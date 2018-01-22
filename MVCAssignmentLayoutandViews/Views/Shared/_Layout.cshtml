@@ -21,7 +21,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a href='@Url.Action("Index", "Home")'>
-                            <img src="~/Content/Image/face logo.png" height="50" width="50" align ="left"/>
+                            <img src="~/Content/Image/face logo.png" height="50" width="50" align="left" />
                         </a>
                         @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                     </div>
@@ -46,7 +46,11 @@
         </footer>
     </div>
 
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/jquery-3.2.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 </body>
 </html>

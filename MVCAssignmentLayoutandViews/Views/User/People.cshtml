@@ -16,12 +16,10 @@
 <h3>Add a Person</h3>
 <form action="@Url.Action("PeopleAdd")" method="post" )>
     <input type="text" name="Addpeople" value="" placeholder="Add a person" />
-    <input type="submit" value="Send" />
+    <input type="submit" value="Add" />
 </form>
 
-<table class="table-bordered table-striped">
     @foreach (var item in MVCAssignmentLayoutandViews.Models.PeopleM.Peoples)
     {
-        <tr><td> @item.Name </td><td><a href="www.youtube.com">Delete</a></td></tr>
+        @Html.Partial("_People", item)
     }
-</table>
