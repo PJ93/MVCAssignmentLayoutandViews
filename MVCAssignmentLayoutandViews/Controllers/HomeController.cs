@@ -97,7 +97,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
                 {
                     awnser = "I'm pretty sure you're dead.";
                 }
-                else if (calc > 95 || calc < 100)
+                else if (calc > 95 && calc < 99)
                 {
                     awnser = "you're perfectly fine";
                 }
