@@ -40,11 +40,21 @@ namespace MVCAssignmentLayoutandViews.Controllers
             return View("People");
         }
 
+        [HttpGet]
+        public ActionResult PeopleEdit(int id)
+        {
+            
+
+
+            return View("PeopleM");
+        }
+
         public ActionResult AjaxDeletePeople(int id)
         {
+
             PeopleM.Peoples.Remove(PeopleM.Peoples.SingleOrDefault(p => p.ID == id));
 
-            return Content("");
+            return View("People");
         }
 
 
