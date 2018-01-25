@@ -46,7 +46,7 @@ namespace MVCAssignmentLayoutandViews.Controllers
             
 
 
-            return View("PeopleM");
+            return View("PeopleEdit");
         }
 
         public ActionResult AjaxDeletePeople(int id)

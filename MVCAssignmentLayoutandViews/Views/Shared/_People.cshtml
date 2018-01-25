@@ -5,13 +5,14 @@
         <div class="col-sm-6"><p>@Model.Name</p></div>
 
         <div class="col-sm-6">
+            @Html.ActionLink("Edit", "PeopleEdit", new { id = Model.ID }) |
             @Ajax.ActionLink("Delete", "AjaxDeletePeople", new { id = Model.ID },
-                    new AjaxOptions
-                    {
-                        InsertionMode = InsertionMode.ReplaceWith,
-                        UpdateTargetId = $"PeopleID" + Model.ID
-                    }, new { @class = "btn btn-danger" }
-                    )
+                 new AjaxOptions
+                 {
+                     InsertionMode = InsertionMode.ReplaceWith,
+                     UpdateTargetId = $"PeopleID" + Model.ID
+                 }, new { @class = "btn btn-danger" }
+                 )
 
 
         </div>
